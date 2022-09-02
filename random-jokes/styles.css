@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+.body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background: hsl(210, 36%, 96%);
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navigation-item {
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+}
+
+.navigation-item-link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  color: #10105487;
+  text-decoration: none;
+  transition: color 300ms;
+  cursor: pointer;
+}
+
+.navigation-item-link:hover {
+  color: #000;
+}
+
+.navigation-item-link.active {
+  color: #000;
+}
+
+.navigation-item .navigation-item-link:nth-child(2) {
+  color: #10105487;
+}
+
+.animated-cat {
+  animation-name: runningCat;
+  animation-duration: 2s;
+}
+
+.cat-wrapper {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cat-pic {
+  height: 300px;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@keyframes runningCat {
+  50% {
+    left: 100%;
+    transform: translateX(0%);
+    visibility: hidden;
+    opacity: 0;
+  }
+  51% {
+    left: 0%;
+    visibility: hidden;
+    transform: translateX(-100%) rotate(720deg);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #49a6e9;
+  color: #fff;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: 0.25rem;
+  transition: all 0.3s linear;
+  font-size: 0.875rem;
+  border: 2px solid #49a6e9;
+  cursor: pointer;
+  box-shadow: 0 1px 11px 2px rgb(0 0 0 / 20%);
+  border-radius: 0.5rem;
+}
+
+.button:hover {
+  color: #49a6e9;
+  background: hsl(205, 86%, 17%);
+}
+
+.quote-section {
+  margin-top: 55px;
+  letter-spacing: 1.2px;
+  padding: 0 25px;
+  max-width: 600px;
+}
+
+.quote {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 18px;
+}
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background: hsl(210, 36%, 96%);
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer .container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.date-section {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.date-symbol,
+.date-year {
+  margin: 0 20px 0 0;
+}
+
+.my-github {
+  font-size: 20px;
+  line-height: 50px;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 300ms;
+}
+
+.my-github:hover {
+  color: #93aad8;
+}
+
+.rs-link {
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rs-link:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(188deg)
+    brightness(92%) contrast(87%);
+}
+
+.rs-logo {
+  height: 100%;
+}
